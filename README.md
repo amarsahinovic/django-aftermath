@@ -32,7 +32,7 @@ To specifiy if backend is executed when some tests fail, use `AFTERMATH_RUN_ON_F
 
 Usually, you will only need to specify the first two options. 
 
-If you wish to implement your own backend, take a look at one of the exisitng backends. All you need is a simple class with `__init__` and `aftermath` functions. If you make one, I'll be happy to include it in the package.
+If you wish to implement your own backend, take a look at one of the existing backends. All you need is a simple class with `__init__` and `aftermath` functions. If you make one, I'll be happy to include it in the package.
 
 TODO
 ====
