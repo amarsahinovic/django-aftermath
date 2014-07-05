@@ -8,7 +8,7 @@ SOURCE_DIR = os.path.join(ROOT_DIR)
 
 setup(
     name="django-aftermath",
-    version="0.1.0",
+    version="0.1.1",
     description="Execute commands after tests are completed.",
     author="Amar Šahinović",
     author_email="amar@sahinovic.com",

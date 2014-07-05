@@ -1,15 +1,18 @@
+import django
 from django.core.exceptions import ImproperlyConfigured
 from .app_settings import (
     AFTERMATH_RUN_ON_FAIL, AFTERMATH_RUN_ON_SUCCESS,
     AFTERMATH_BACKEND_CLASS
 )
 
-# TODO: For django 1.6, use default test runner, and leave this check for 1.5
-try:
-    from discover_runner import DiscoverRunner
-except ImportError:
-    raise ImproperlyConfigured("Please make sure you have "
-                               "django-discover-runner installed.")
+if django.VERSION[:2] < (1, 6):
+    try:
+        from discover_runner import DiscoverRunner
+    except ImportError:
+        raise ImproperlyConfigured("Please make sure you have "
+                                   "django-discover-runner installed.")
+else:
+    from django.test.runner import DiscoverRunner
 
 # Looks nicer to instantiate normally capitalized class :)
 Backend = AFTERMATH_BACKEND_CLASS
