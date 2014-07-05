@@ -37,6 +37,4 @@ If you wish to implement your own backend, take a look at one of the existing ba
 TODO
 ====
 
-Implement support for Django 1.6 by using builtin test runner, and use django-discover-runner for older versions.
-
 Improve docs/readme.
