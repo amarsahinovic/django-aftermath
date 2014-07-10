@@ -1,5 +1,3 @@
-
-
 class NullBackend(object):
 
     def __init__(self, number_of_failed_tests, *args, **kwargs):

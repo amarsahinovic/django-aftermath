@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 
 
@@ -12,7 +13,7 @@ class NotifySendBackend(object):
         command = self._success_command
         if self._number_of_failed_tests > 0:
             command = self._fail_command
-        try:                                                                    
-            os.popen(command)                                                       
-        except Exception, e:                                                    
-            print e.message                                                     
+        try:
+            os.popen(command)
+        except Exception as e:
+            print(e.message)
