@@ -1,5 +1,10 @@
+import django
 from django.conf import settings
-from django.utils import importlib
+
+if django.VERSION[:2] < (1, 9):
+    from django.utils import importlib
+else:
+    import importlib
 
 
 # Taken from django-rest-framework
